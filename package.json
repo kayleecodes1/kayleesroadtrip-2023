@@ -1,13 +1,16 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "latest",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  }
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "web": "yarn workspace web dev",
+        "web:build": "yarn workspace web build",
+        "web:start": "yarn workspace web start",
+        "studio": "yarn workspace studio dev",
+        "studio:start": "yarn workspace studio start",
+        "studio:build": "yarn workspace studio build",
+        "studio:deploy": "yarn workspace studio deploy",
+        "studio:deploy-graphql": "yarn workspace studio deploy-graphql"
+    }
 }
